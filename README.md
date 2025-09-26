@@ -1,1 +1,3 @@
-# Pulsevote
+# Pulsevote - ICE TASK 4
+
+The PulseVote backend has been dockerized to ensure consistent, reproducible deployments across environments by using a multi‑stage Dockerfile for building and running the Node.js API, a .dockerignore file to exclude unnecessary or sensitive files, and a docker-compose.yml to orchestrate the API alongside a MongoDB service with persistent storage. The API runs on port 5000 with a /health endpoint for monitoring, and environment variables are managed via a .env file (mongodb://mongo:27017/pulsevote inside Docker, mongodb://localhost:27017/pulsevote locally). Postman collections were updated to use http:// instead of https://, and the test database is cleared before running Jest tests to guarantee clean, isolated runs. Together, these changes align the project with containerization best practices and prepare it for future CI/CD pipeline automation.
